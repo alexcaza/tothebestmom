@@ -1,0 +1,175 @@
+/**
+ *  If you want to override some foundation settings, you have to change values here.
+ *  The list of settings values are listed here bower_components/foundation/scss/foundation/_settings.scss
+ */
+$topbar-background: transparent;
+// $background-main: #CF8BA9;
+$background-main: #BABABA;
+$highlight-color: #C7374D;
+
+// Font stacks
+$cursive-stack: 'Dancing Script', cursive;
+$sans-stack: 'Raleway', Helvetica, Arial, sans-serif;
+
+/**
+ *  The import of foundation is made manually because there is still no links of the
+ *  sass version in their bower.json...
+ */
+@import '../../bower_components/foundation-sites/scss/foundation';
+@include foundation-everything;
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.motherly {
+    color: $highlight-color;
+    font-family: $cursive-stack;
+    transition: color 250ms ease-in-out;
+}
+
+.center {
+    text-align: center;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body, html {
+    // background: $background-main;
+    background: radial-gradient(ellipse at center, #C7A3C4 1%, #B86BBF 100%);
+    color: white;
+    letter-spacing: .2px;
+    line-height: 16px;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 100px auto 0 auto;
+    z-index: 10;
+    position: relative;
+
+    h1 {
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        color: white;
+        letter-spacing: 1px;
+        font-size: 2.2rem;
+        font-weight: 500;
+        font-family: $sans-stack;
+
+        .motherly {
+            font-size: 3rem;
+        }
+    }
+
+    input {
+        margin: 1.5rem auto 2rem auto;
+        padding: 2rem 0;
+        border: none;
+        box-shadow: none;
+        width: 80%;
+        border-bottom: 3px dashed $highlight-color;
+        background: transparent;
+        color: $highlight-color;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 200;
+        &::-webkit-input-placeholder {
+            color:    $highlight-color;
+        }
+        &:-moz-placeholder {
+           color:    $highlight-color;
+           opacity:  1;
+        }
+        &::-moz-placeholder {
+           color:    $highlight-color;
+           opacity:  1;
+        }
+        &:-ms-input-placeholder {
+           color: $highlight-color;
+        }
+
+        &:focus {
+            box-shadow: none;
+            border: none;
+            background: none;
+            border-bottom: 3px dashed $highlight-color;
+            &::-webkit-input-placeholder {
+                color: transparent;
+            }
+            &:-moz-placeholder {
+               color: transparent;
+               opacity:  1;
+            }
+            &::-moz-placeholder {
+               color: transparent;
+               opacity:  1;
+            }
+            &:-ms-input-placeholder {
+               color: transparent;
+            }
+        }
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        color: $highlight-color;
+        text-transform: uppercase;
+        background: transparent;
+        border: 1px solid $highlight-color;
+        font-weight: 500;
+        transition: all 250ms ease-in-out;
+
+        &:focus, &:hover {
+            background: transparent;
+            border-color: white;
+            color: white;
+        }
+    }
+
+    .awesome-list-container {
+        margin-top: 1.5rem;
+
+        .awesome-list {
+            font-size: 1.2rem;
+            font-family: $sans-stack;
+            font-weight: 500;
+            line-height: 1rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    .share-section {
+        margin-top: 5rem;
+        p {
+            line-height: 1rem;;
+            letter-spacing: 1px;
+        }
+        input {
+            font-size: 1.2rem;
+            border-bottom: 1px dashed $highlight-color;
+            width: 50%;
+            margin-top: 0;
+        }
+    }
+
+}
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
