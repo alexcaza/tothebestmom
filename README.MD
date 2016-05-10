@@ -10,4 +10,4 @@ The code is free to use for anyone who wants to take bits and pieces, but I can 
 For Those That Care
 ==========================
 
-It was scaffolded using the `[gulp-angular](https://github.com/Swiip/generator-gulp-angular)` yeoman generator.
+It was scaffolded using the [gulp-angular](https://github.com/Swiip/generator-gulp-angular) yeoman generator.
